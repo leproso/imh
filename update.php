@@ -1,14 +1,14 @@
 <?php
 include "db.php";
-echo 'hello';
+
 if(isset($_GET['update']))
 {
-$id=111;
+$id=$_GET['id'];
 $name=$_GET['name'];
 $client=$_GET['client'];
 $active=$_GET['active'];
   
-$q=mysqli_query($connection,"INSERT INTO `im_home` (`name`,`client`,`active`) VALUES ('$name','$client','$active' where `id`='$id'");
+$q=mysqli_query($connection,"UPDATE im_home SET name = '$name', client = '$client', active = '$active' WHERE id = $id");
 if($q)
 echo "success";
 else
