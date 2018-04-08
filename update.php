@@ -7,7 +7,7 @@
  $client=$_POST['client'];
  $active=$_POST['active'];
   
- echo $id + ' // ' + $name + ' // ' + $client + ' // ' + $active + ' // ' + $_POST['update'] + ' </br> ';
+ echo $id + ' // ' + $name + ' // ' + $client + ' // ' + $active;
  $q=mysqli_query($connection,"INSERT INTO `im_home` (`name`,`client`,`active`) VALUES ('$name','$client','$active' where `id`='$id'");
  if($q)
  echo "success";
