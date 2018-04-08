@@ -1,8 +1,7 @@
 <?php
  include "db.php";
  echo 'hello';
- if(isset($_POST['update']))
- {
+
  $id=$_POST['id'];
  $name=$_POST['name'];
  $client=$_POST['client'];
@@ -14,5 +13,5 @@
  echo "success";
  else
  echo "error";
- }
+
  ?>
